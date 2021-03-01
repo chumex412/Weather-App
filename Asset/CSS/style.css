@@ -1,0 +1,127 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-size: 1.05rem;
+  --type-scale: 1.15;
+  --line-height: 1.8rem;
+  --height-scale: 1.11;
+  --parag: calc(var(--base-size) * var(--line-height));
+  --h5: var(--base-size);
+  --h4: calc(var(--parag) * var(--line-height));
+  --h3: calc(var(--h4) * var(--line-height));
+  --h2: calc(var(--h3) * var(--line-height));
+  --h1: calc(var(--h2) * var(--line-height));
+  --parag-Lheight: calc(var(--height-scale) * var(--line-height));
+  --h5-Lheight: var(--line-height);
+  --h4-Lheight: calc(var(--parag-Lheight) * var(--height-scale));
+  --h3-Lheight: calc(var(--h4-Lheight) * var(--height-scale));
+  --h2-Lheight: calc(var(--h3-Lheight) * var(--height-scale));
+  --h1-Lheight: calc(var(--h2-Lheight) * var(--height-scale));
+  --primary-color: rgb(0, 123, 255);
+  --trans-primary-color: rgba(0, 123, 225, 0.6);
+}
+
+/* Browser Default Reset */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+/* Utility */
+
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.card-body {
+  background-image: linear-gradient(var(--primary-color), var(--trans-primary-color));
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mx-auto {
+  margin: auto;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+/* Mian styling */
+
+.modal {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dialog {
+  width: 60%;
+  min-height: auto;
+  padding: 2rem;
+}
+
+/* Media Query */
+
+@media (min-width: 600px) {
+  :root {
+    --base-size: 1.15rem;
+    --type-scale: 1.2;
+    --height-scale: 1.13;
+  }
+
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --type-scale: 1.25;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --base-size: 1.35rem;
+    --type-scale: 1.2;
+    --height-scale: 1.15;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

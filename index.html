@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+
+  <!------------------------- Custom CSS ----------------------->
+  <link rel="stylesheet" href="Asset/CSS/style.css">
+
+</head>
+<body>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-3 mx-auto">
+        <div class="card">
+          <div class="card-body text-center">
+            <h1 id="location"></h1>
+            <h3 id="desc"></h3>
+            <h3 id="temp-string"></h3>
+            <img src="" alt="" id="icon">
+            <ul class="w-details">
+              <li class="w-humidity"></li>
+              <li class="w-dewpoint"></li>
+              <li class="w-feels-like"></li>
+              <li class="w-wind"></li>
+            </ul>
+            <button class="btn open-modal" data-open="modal1">Change Location</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal1">
+    <div class="modal-dialog">
+      <header class="modal-header">
+        <h4></h4>
+        <button class="close-modal" aria-label="close-modal" data-close>&times;</button>
+      </header>
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" name="state" id="state">
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" name="city" id="city">
+      </div>
+    </div>
+  </div>
+
+  <!----------------------- Custom JS ---------------------------->
+  <script src="Asset/JS/storage.js"></script>
+  <script src="Asset/JS/weather.js"></script>
+  <script src="Asset/JS/ui.js"></script>
+  <script src="Asset/JS/modal.js"></script>
+  <script src="Asset/JS/app.js"></script>
+</body>
+</html>
